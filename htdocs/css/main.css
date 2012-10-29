@@ -11,3 +11,21 @@ body {
 	font-weight: bold;
 	color: white;
 }
+
+.tweet-collection-container {
+}
+
+.tweet-collection-container > div {
+	outline: solid rgb(184,0,0) 1px ;
+	margin: 5px;
+	padding: 15px;
+	float: left;
+	width: 100%;
+}
+
+.tweet-collection-container > div img {
+	float:left;
+}
+.tweet-collection-container > div p {
+	float:right;
+}
