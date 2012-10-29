@@ -8,7 +8,8 @@
 	var Tweet = Backbone.Model.extend({});
 
 	var Tweets = Backbone.Collection.extend({
-		model: Tweet
+		model: Tweet,
+		unread: 0
 	})
 
 	tweets = new Tweets();
@@ -37,7 +38,7 @@
 		renderTweet: function (tweet) {
 			console.log("renderTweet");
 			var tweetView = new TweetView({model: tweet});
-			this.$el.append(tweetView.render().el);
+			this.$el.prepend(tweetView.render().el);
 		}
 	});
 
