@@ -15,7 +15,7 @@ body {
 .tweet-collection-container {
 }
 
-.tweet-collection-container > div {
+.tweet-collection-container > li {
 	outline: solid rgb(184,0,0) 1px ;
 	margin: 5px;
 	padding: 15px;
@@ -23,9 +23,13 @@ body {
 	width: 100%;
 }
 
-.tweet-collection-container > div img {
+.tweet-collection-container > li.new {
+	background-color: silver;
+}
+
+.tweet-collection-container > li img {
 	float:left;
 }
-.tweet-collection-container > div p {
+.tweet-collection-container > li p {
 	float:right;
 }

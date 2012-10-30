@@ -28,7 +28,7 @@
 
             <div class="hero-unit">
                 <h1>Realtime Web App</h1>
-                <p>Updating multiple parts of the page with data fetched from the server, powered by <a href="http://twitter.github.com/bootstrap/" data-title="Twitter Bootstrap" data-content="This is just a JavaScript exercise, but why not leverage Bootstrap for layout, and a little bit of visual flair. Also, these informative popovers!" data-placement="bottom" class="app-info">Bootstrap</a>, <a href="http://html5boilerplate.com/" data-title="HTML5 Boilerplate" data-content="We're obviously going to need jQuery, Chrome Frame, Google Analytics, and Modernizr so let's just bang it all out at once. Don't have time to update the favicons and touch icons, but I totally would!" data-placement="bottom" class="app-info">HTML5 Boilerplate</a>, <a href="http://handlebarsjs.com/" data-title="Handlebars.js" data-content="Besides the clever pun on the Mustache templating engine, Handlebars keeps our JavaScript clean by passing JSON into templates." data-placement="bottom" class="app-info">Handlebars</a>, and <a href="http://backbonejs.org/" data-title="Backbone.js" data-content="Here's the real meat of our app. Backbone handles communication with the server, manages the data, and hands off JSON to Handlebars." data-placement="bottom" class="app-info">Backbone</a>.</p>
+                <p>Updating multiple parts of the page with data fetched from the server, powered by <a href="http://twitter.github.com/bootstrap/" data-title="Twitter Bootstrap" data-content="Why not leverage Bootstrap for layout, and a little bit of visual flair. Also, these informative popovers!" data-placement="bottom" class="app-info">Bootstrap</a>, <a href="http://html5boilerplate.com/" data-title="HTML5 Boilerplate" data-content="We're obviously going to need jQuery, Chrome Frame, Google Analytics, and Modernizr so let's just bang it all out at once." data-placement="bottom" class="app-info">HTML5 Boilerplate</a>, <a href="http://handlebarsjs.com/" data-title="Handlebars.js" data-content="Besides the clever pun on the Mustache templating engine, Handlebars keeps our JavaScript clean by passing JSON into templates." data-placement="bottom" class="app-info">Handlebars</a>, and <a href="http://backbonejs.org/" data-title="Backbone.js" data-content="Here's the real meat of our app. Backbone handles communication with the server, manages the data, and hands off JSON to Handlebars." data-placement="bottom" class="app-info">Backbone</a>.</p>
             </div>
 
             <div class="row">
@@ -39,8 +39,12 @@
                 </div>
                 <div class="span8 query-results">
                     <div class="well">
-                        <h2>Twitter Results for "Guild Wars"</h2>
+                        <h2>Twitter Results for "Obama"</h2>
                     </div>
+                    <div class="update-container"></div>
+                    <script id="update-template" type="text/template">
+                        <p>Click to view <%= new_tweets %> new tweets</p>
+                    </script>
                     <div class="tweet-updates"></div>
                     <div class="tweet-collection-container">
                     </div>

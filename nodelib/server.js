@@ -7,7 +7,7 @@ var fs = require('fs');
 var util = require('util');
 var twitter = require('twitter');
 
-var query = "obama";
+var query = "poop";
 
 server.listen(8888);
 
