@@ -12,24 +12,35 @@ body {
 	color: white;
 }
 
-.tweet-collection-container {
+.update-container {
+	cursor: pointer;
 }
 
 .tweet-collection-container > li {
-	outline: solid rgb(184,0,0) 1px ;
 	margin: 5px;
 	padding: 15px;
-	float: left;
-	width: 100%;
+	list-style: none;
+	display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
 }
 
 .tweet-collection-container > li.new {
-	background-color: silver;
+	background-color: rgba(184,0,0,.1);
 }
 
 .tweet-collection-container > li img {
-	float:left;
+	margin-right: 15px;
+	width: 48px;
 }
-.tweet-collection-container > li p {
-	float:right;
+
+.tweet-collection-container > li div {
+	width: -webkit-flex(2);
+    width: -moz-flex(2);
+    width: -ms-flex(2);
+    width: -o-flex(2);
+}
+.tweet-collection-container > li p.tweet-text {
+	font-weight: bold;
 }

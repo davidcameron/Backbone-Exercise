@@ -28,18 +28,13 @@
 
             <div class="hero-unit">
                 <h1>Realtime Web App</h1>
-                <p>Updating multiple parts of the page with data fetched from the server, powered by <a href="http://twitter.github.com/bootstrap/" data-title="Twitter Bootstrap" data-content="Why not leverage Bootstrap for layout, and a little bit of visual flair. Also, these informative popovers!" data-placement="bottom" class="app-info">Bootstrap</a>, <a href="http://html5boilerplate.com/" data-title="HTML5 Boilerplate" data-content="We're obviously going to need jQuery, Chrome Frame, Google Analytics, and Modernizr so let's just bang it all out at once." data-placement="bottom" class="app-info">HTML5 Boilerplate</a>, <a href="http://handlebarsjs.com/" data-title="Handlebars.js" data-content="Besides the clever pun on the Mustache templating engine, Handlebars keeps our JavaScript clean by passing JSON into templates." data-placement="bottom" class="app-info">Handlebars</a>, and <a href="http://backbonejs.org/" data-title="Backbone.js" data-content="Here's the real meat of our app. Backbone handles communication with the server, manages the data, and hands off JSON to Handlebars." data-placement="bottom" class="app-info">Backbone</a>.</p>
+                <p>Updating multiple parts of the page with data fetched from the server, powered by <a href="http://twitter.github.com/bootstrap/" data-title="Twitter Bootstrap" data-content="Why not leverage Bootstrap for layout, and a little bit of visual flair. Also, these informative popovers!" data-placement="bottom" class="app-info">Bootstrap</a>, <a href="http://html5boilerplate.com/" data-title="HTML5 Boilerplate" data-content="We're obviously going to need jQuery, Chrome Frame, Google Analytics, and Modernizr so let's just bang it all out at once." data-placement="bottom" class="app-info">HTML5 Boilerplate</a>, and <a href="http://backbonejs.org/" data-title="Backbone.js" data-content="Here's the real meat of our app. Backbone handles communication with the server, manages the data, and hands off JSON to Underscore templates." data-placement="bottom" class="app-info">Backbone</a>.</p>
             </div>
 
             <div class="row">
-                <div class="span4 query-stats">
+                <div class="span12 query-results">
                     <div class="well">
-                        <h2>Query Stats</h2>
-                    </div>
-                </div>
-                <div class="span8 query-results">
-                    <div class="well">
-                        <h2>Twitter Results for "Obama"</h2>
+                        <h2>Twitter Results for "Seattle"</h2>
                     </div>
                     <div class="update-container"></div>
                     <script id="update-template" type="text/template">
@@ -50,8 +45,10 @@
                     </div>
                     <script id="tweet-template" type="text/template">
                         <img src='<%= profile_image_url %>'/>
-                        <p class='tweet-text'><%= text %></p>
-                        <p class='tweet-info'>by <%= from_user %> - <small><%= created_at %></small></p>
+                        <div>
+                            <p class='tweet-text'><%= text %></p>
+                            <p class='tweet-info'>by <%= from_user %> - <small><%= created_at %></small></p>
+                        </div>
                     </script>
                 </div>
             </div>

@@ -7,17 +7,16 @@ var fs = require('fs');
 var util = require('util');
 var twitter = require('twitter');
 
-var query = "poop";
+var query = "seattle";
 
 server.listen(8888);
 
-// Twitter
-
+// Twitter - remember to put these in!
 var twit = new twitter({
-    consumer_key: 'KYHmJw6AyXlThdK0zXKJWw',
-    consumer_secret: 'wJ8CzqXey7j799PP50CsOUm31MYwldLzdUh7pzpwqg',
-    access_token_key: '53682349-jHZqmPp1LbsxDNbapqSuPcha0lqStE01382Ln4BVF',
-    access_token_secret: 'M37NgppN2o8uVX3y1lBvQezNqD6FwvO8P4HH7Dde4o'
+    consumer_key: '',
+    consumer_secret: '',
+    access_token_key: '',
+    access_token_secret: ''
 });
 
 
@@ -25,7 +24,7 @@ io.sockets.on('connection', function (socket) {
 
 	// Preload with initial tweets
 	twit.search(query, function (data) {
-    	socket.emit('tweets', data.results);
+    	socket.emit('tweets:search', data.results);
 	});	
 
 	// Then use the streaming API so we don't run into API limits
@@ -36,7 +35,7 @@ io.sockets.on('connection', function (socket) {
 	    		data.profile_image_url = data.user.profile_image_url;
 	    		data.from_user = data.user.screen_name;
 	    	}
-	        socket.emit("tweets", data);
+	        socket.emit("tweets:stream", data);
 	    });
 	});
 	
