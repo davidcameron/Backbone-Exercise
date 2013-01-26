@@ -11,12 +11,13 @@ var query = "seattle";
 
 server.listen(8888);
 
-// Twitter - remember to put these in!
+// Twitter
+
 var twit = new twitter({
-    consumer_key: '',
-    consumer_secret: '',
-    access_token_key: '',
-    access_token_secret: ''
+    consumer_key: 'KYHmJw6AyXlThdK0zXKJWw',
+    consumer_secret: 'wJ8CzqXey7j799PP50CsOUm31MYwldLzdUh7pzpwqg',
+    access_token_key: '53682349-jHZqmPp1LbsxDNbapqSuPcha0lqStE01382Ln4BVF',
+    access_token_secret: 'M37NgppN2o8uVX3y1lBvQezNqD6FwvO8P4HH7Dde4o'
 });
 
 
